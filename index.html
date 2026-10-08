@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ayla Store — Coleções exclusivas</title>
+<meta name="description" content="Ayla Store — loja de coleções digitais.">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#0c0b10;color:#fff}
+header{padding:18px 6%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #25232c;position:sticky;top:0;background:#0c0b10ee;backdrop-filter:blur(10px);z-index:10}
+.logo{font-size:22px;font-weight:800;letter-spacing:.5px}.logo span{color:#d9a7ff}
+nav a{color:#ddd;text-decoration:none;margin-left:20px;font-size:14px}
+.hero{padding:80px 6% 70px;max-width:1100px;margin:auto}.tag{color:#d9a7ff;text-transform:uppercase;font-size:12px;font-weight:700;letter-spacing:2px}
+h1{font-size:clamp(42px,8vw,76px);line-height:.95;margin:16px 0}.hero p{color:#bbb;max-width:580px;font-size:18px;line-height:1.6}
+.btn{display:inline-block;background:#fff;color:#111;padding:14px 22px;border-radius:999px;text-decoration:none;font-weight:700;margin-top:12px}
+section{padding:35px 6%;max-width:1200px;margin:auto}.section-title{display:flex;justify-content:space-between;align-items:end;margin-bottom:20px}
+h2{font-size:30px;margin:0}.muted{color:#999;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#15131b;border:1px solid #292631;border-radius:18px;overflow:hidden}
+.cover{height:300px;background:linear-gradient(135deg,#33213d,#17151d);display:flex;align-items:center;justify-content:center;color:#c9b4d4;font-size:14px}
+.card-body{padding:18px}.card h3{margin:0 0 7px}.price{font-size:20px;font-weight:800;margin:15px 0}.buy{width:100%;border:0;border-radius:10px;padding:12px;background:#d9a7ff;color:#17121c;font-weight:800;cursor:pointer}
+footer{margin-top:60px;padding:35px 6%;border-top:1px solid #25232c;color:#888;text-align:center;font-size:13px}
+.notice{background:#17151d;border:1px solid #292631;padding:14px;border-radius:12px;color:#aaa;font-size:13px;margin-top:25px}
+@media(max-width:750px){nav{display:none}.grid{grid-template-columns:1fr 1fr}.cover{height:220px}}
+@media(max-width:480px){.grid{grid-template-columns:1fr}.hero{padding-top:55px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">Ayla <span>Store</span></div>
+  <nav><a href="#colecoes">Coleções</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="tag">Conteúdo digital exclusivo</div>
+  <h1>Suas melhores<br>coleções em um só lugar.</h1>
+  <p>Uma loja simples, elegante e preparada para vender coleções digitais diretamente pelo celular.</p>
+  <a class="btn" href="#colecoes">Ver coleções</a>
+  <div class="notice">As imagens abaixo são espaços reservados. Substitua-as pelas suas fotos antes de publicar.</div>
+</section>
+
+<section id="colecoes">
+  <div class="section-title"><h2>Coleções</h2><span class="muted">Escolha uma coleção</span></div>
+  <div class="grid">
+    <article class="card"><div class="cover">FOTO / CAPA 01</div><div class="card-body"><h3>Essentials</h3><p class="muted">Coleção digital com 10 fotos.</p><div class="price">R$ 19,90</div><button class="buy" onclick="comprar('Essentials','19,90')">Comprar</button></div></article>
+    <article class="card"><div class="cover">FOTO / CAPA 02</div><div class="card-body"><h3>Premium</h3><p class="muted">Coleção digital com 25 fotos.</p><div class="price">R$ 39,90</div><button class="buy" onclick="comprar('Premium','39,90')">Comprar</button></div></article>
+    <article class="card"><div class="cover">FOTO / CAPA 03</div><div class="card-body"><h3>Exclusive</h3><p class="muted">Coleção digital especial.</p><div class="price">R$ 59,90</div><button class="buy" onclick="comprar('Exclusive','59,90')">Comprar</button></div></article>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="section-title"><h2>Como funciona</h2></div>
+  <p class="muted" style="line-height:1.8">1. Escolha uma coleção. 2. Faça o pagamento. 3. Receba o acesso ao conteúdo adquirido. Nesta versão, o botão de compra é demonstrativo; o pagamento real pode ser conectado depois.</p>
+</section>
+
+<section id="contato">
+  <div class="section-title"><h2>Contato</h2></div>
+  <p class="muted">Atendimento: coloque aqui seu Instagram, e-mail ou WhatsApp.</p>
+</section>
+</main>
+
+<footer>© 2026 Ayla Store · Termos · Privacidade</footer>
+
+<script>
+function comprar(nome,preco){
+  alert("Você selecionou: "+nome+" — R$ "+preco+
+  "\\n\\nO pagamento ainda não está conectado nesta versão. O próximo passo é configurar Pix/cartão e a entrega automática.");
+}
+</script>
+</body>
+</html>
